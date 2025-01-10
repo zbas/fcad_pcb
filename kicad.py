@@ -1317,11 +1317,11 @@ class KicadFcad:
                     wstart = w
                     elist.insert(0,(w,e))
                 elif pend.distanceToPoint(ps) <= (wend+w)/2:
-                    e.reverse()
                     pend = pe
                     wend = w
                     elist.append((w,e))
                 elif pend.distanceToPoint(pe) <= (wend+w)/2:
+                    e.reverse()
                     pend = ps
                     wend = w
                     elist.append((w,e))
